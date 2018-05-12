@@ -13,8 +13,4 @@ public class Question {
 	[TextArea(3, 10)]
 	public string[] sentences;
 
-	
-
-	// GameObject.Find("buttonName").GetComponentInChildren<Text>().text = "la di da";
-
 }

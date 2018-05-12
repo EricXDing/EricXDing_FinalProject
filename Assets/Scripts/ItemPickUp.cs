@@ -8,7 +8,6 @@ public class ItemPickUp : MonoBehaviour {
 
 	void OnTriggerEnter (Collider col)
 		{
-				Debug.Log("Picking Up " + items.name);
 				Inventory.instance.Add(items);
 				AudioSource.PlayClipAtPoint(clip, transform.position);
 				Destroy(gameObject);

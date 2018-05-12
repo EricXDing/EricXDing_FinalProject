@@ -125,13 +125,13 @@ public class QuestionManager : MonoBehaviour {
 		}
 		string sentence = sentences.Dequeue();
 		dialogue.text = sentence;
-		print(sentences.Count);
+
 	}
 
 
 	void EndDialogue()
 	{
-		// Debug.Log("End of the Conversation");
+
 		SceneManager.LoadScene("Main");
 	}
 

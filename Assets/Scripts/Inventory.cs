@@ -8,12 +8,6 @@ public class Inventory : MonoBehaviour {
 		public Text inventoryName;
 		public Text inventoryDescription;
 
-
-		void start() {
-
-
-		}
-
 		// singletance
 		public static Inventory instance;
 		void Awake()
@@ -34,35 +28,10 @@ public class Inventory : MonoBehaviour {
 
 			inventoryName.text += item.name;
 			inventoryName.text += "\n";
+			inventoryName.text += "\n";
 			inventoryDescription.text += item.description;
 			inventoryDescription.text += "\n";
 
-			// // GameObject newText = new GameObject("Text1");
-			// // var newTextComp = newText.AddComponent<Text>();
-			// // newTextComp.text = "text" + item.name;
-			// // newTextComp.fontSize = 14;
-			// // newText.transform.SetParent(transform);
-			//
-	    // GameObject UItextGO = new GameObject("Text2");
-	    // UItextGO.transform.SetParent(canvas_transform);
-			//
-	    // RectTransform trans = UItextGO.AddComponent<RectTransform>();
-	    // trans.anchoredPosition = new Vector2(x, y);
-			//
-	    // Text text = UItextGO.AddComponent<Text>();
-	    // text.text = "text" + item.name;
-	    // text.fontSize = 20;
-	    // // text.color = text_color;
-		}
-
-		void Update () {
-				// foreach (Items element in items)
-				// {
-				// 		// inventoryName.text = element.name;
-				// 		// inventoryDescription.text = element.description;
-				//
-				//
-				// }
 		}
 
 

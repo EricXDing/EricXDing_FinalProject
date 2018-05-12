@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour {
 
 	void EndDialogue()
 	{
-		Debug.Log("End of the Conversation");
+		
 		StartGame.gameObject.SetActive(true);
 		NextStence.gameObject.SetActive(false);
 		OpenDialogue.gameObject.SetActive(true);
