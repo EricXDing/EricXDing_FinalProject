@@ -7,6 +7,8 @@ public class Menu : MonoBehaviour {
 	public static bool GameIsPaused = false;
 	public GameObject FPC;
 	public GameObject MenuUI;
+	public GameObject MainPanel;
+	public GameObject QuestionsPanel;
 
 
 
@@ -37,11 +39,25 @@ public class Menu : MonoBehaviour {
 	void Pause()
 	{
 		MenuUI.SetActive(true);
+		MainPanel.SetActive(true);
+		QuestionsPanel.SetActive(false);
 		Time.timeScale = 0f;
 		GameIsPaused = true;
 		FPC.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController> ().m_MouseLook.m_cursorIsLocked = false;
 		FPC.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController> ().m_MouseLook.XSensitivity = 0f;
 		FPC.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController> ().m_MouseLook.YSensitivity = 0f;
+	}
+
+	public void OpenMainPanel()
+	{
+		MainPanel.SetActive(true);
+		QuestionsPanel.SetActive(false);
+	}
+
+	public void OpenQuestionsPanel()
+	{
+		MainPanel.SetActive(false);
+		QuestionsPanel.SetActive(true);
 	}
 
 }
